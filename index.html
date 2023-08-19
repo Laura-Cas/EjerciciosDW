@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú de Ejercicios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      background-color: #b9e3eb;
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #65c5e9;
+    }
+
+    section {
+      margin-top: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      width: 100px;
+      padding: 5px;
+    }
+
+    input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    p {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menú de Ejercicios</h1>
+  <ul>
+    <li><a href="#ejercicio1">Ejercicio 1: Cálculo del IMC</a></li>
+  </ul>
+
+   <!-- Ejercicio 1: Cálculo del IMC -->
+   <section id="ejercicio1">
+    <h2>Ejercicio 1: Cálculo del IMC</h2>
+    <form onsubmit="calcularIMC(); return false;">
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" step="0.1" required><br>
+      <label for="altura">Altura (m):</label>
+      <input type="number" id="altura" step="0.01" required><br>
+      <input type="submit" value="Calcular">
+    </form>
+    <p id="resultado"></p>
+    <p id="bmi"></p>
+  </section>
+
+  <ul>
+    <li><a href="#ejercicio2">Ejercicio 2: Numeros de like</a></li>
+  </ul>
+
+   <!-- Ejercicio 2: Cálculo de likes -->
+   <section id="ejercicio2">
+        <h2>Ejercicio 2: Función Likes</h2>
+        <p>Ingrese un número:</p>
+        <input type="number" id="numero2">
+        <button onclick="calcularLikes()">Calcular</button>
+        <p id="resultado2"></p>
+      </section>
+    <p id="resultado2"></p>
+    <p id="bmi"></p>
+  </section>
+
+
+
+  <ul>
+    <li><a href="#ejercicio3">Ejercicio 3: Contraseña Válida</a></li>
+  </ul>
+  <!-- Ejercicio 3: Contraseña Válida -->
+  <section id="ejercicio3">
+    <h2>Ejercicio 3: Contraseña Válida</h2>
+    <form onsubmit="validarContraseña(); return false;">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" required><br>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" required><br>
+      <input type="submit" value="Validar">
+    </form>
+    <p id="resultado3"></p>
+  </section>
+
+
+
+  <ul>
+    <li><a href="#ejercicio4">Ejercicio 4: Cálculo de Impuestos</a></li>
+  </ul>
+    <!-- Ejercicio 4: Cálculo de Impuestos -->
+  <section id="ejercicio4">
+    <h2>Ejercicio 4: Cálculo de Impuestos</h2>
+    <p>Ingrese la edad:</p>
+    <input type="number" id="edad">
+    <p>Ingrese los ingresos:</p>
+    <input type="number" id="ingresos">
+    <button onclick="calcularImpuestos()">Calcular</button>
+    <p id="resultado4"></p>
+  </section>
+
+
+  <ul>
+    <li><a href="#ejercicio5">Ejercicio 5: Imprimir un Arreglo</a></li>
+  </ul>
+    <!-- Ejercicio 5: Imprimir un Arreglo -->
+  <section id="ejercicio5">
+    <h2>Ejercicio 5: Imprimir un Arreglo</h2>
+    <button onclick="imprimirArreglo([1, 'Hola', 2, 'Mundo'])">Imprimir Arreglo</button>
+    <ul id="resultado5"></ul>
+  </section>
+
+
+  <ul>
+    <li><a href="#ejercicio6">Ejercicio 6: Número de Caracteres</a></li>
+  </ul>
+    <!-- Ejercicio 6: Número de Caracteres-->
+  <section id="ejercicio6">
+    <h2>Ejercicio 6: Número de Caracteres</h2>
+    <p>Ingrese un string:</p>
+    <input type="text" id="texto">
+    <p>Ingrese un caracter:</p>
+    <input type="text" id="caracter" maxlength="1">
+    <button onclick="contarCaracteres()">Contar</button>
+    <p id="resultado6"></p>
+  </section>
+
+
+  <ul>
+    <li><a href="#ejercicio7">Ejercicio 7: Sumar Arreglo</a></li>
+  </ul>
+    <!-- Ejercicio 7: Sumar Arreglo-->
+  <section id="ejercicio7">
+    <h2>Ejercicio 7: Sumar Arreglo</h2>
+    <p>Ingrese un arreglo de números separados por comas:</p>
+    <input type="text" id="arreglo">
+    <button onclick="sumarArreglo()">Sumar</button>
+    <p id="resultado7"></p>
+  </section>
+
+
+  <ul>
+    <li><a href="#ejercicio8">Ejercicio 8: Multiplicar Arreglo</a></li>
+  </ul>
+    <!-- Ejercicio 8: Multiplicar Arreglo-->
+  <section id="ejercicio8">
+    <h2>Ejercicio 8: Multiplicar Arreglo</h2>
+    <p>Ingrese un arreglo de números separados por comas:</p>
+    <input type="text" id="arreglo8">
+    <button onclick="multiplicarArreglo()">Multiplicar</button>
+    <p id="resultado8"></p>
+  </section>
+
+  <ul>
+    <li><a href="#ejercicio9">Ejercicio 9: Sumar Arreglo en Rango</a></li>
+  </ul>
+    <!-- Ejercicio 9: Sumar Arreglo en Rango-->
+
+  <section id="ejercicio9">
+    <h2>Ejercicio 9: Sumar Arreglo en Rango</h2>
+    <p>Ingrese un arreglo de números separados por comas:</p>
+    <input type="text" id="arreglo2">
+    <p>Ingrese la posición inicial:</p>
+    <input type="number" id="posicionInicial">
+    <p>Ingrese la posición final:</p>
+    <input type="number" id="posicionFinal">
+    <button onclick="sumarArregloEnRango()">Sumar</button>
+    <p id="resultado9"></p>
+  </section>
+
+  <ul>
+    <li><a href="#ejercicio10">Ejercicio 10: Encontrar el Número Máximo en un Arreglo</a></li>
+  </ul>
+    <!-- Ejercicio 10: Encontrar el Número Máximo en un Arreglo-->
+  <section id="ejercicio10">
+    <p>Sin utilizar math </p>
+    <p>Ingrese un arreglo de números separados por comas:</p>
+    <input type="text" id="arreglo3">
+    <button onclick="encontrarMaximo()">Encontrar Máximo</button>
+    <p id="resultado10"></p>
+  </section>
+
+  <section id="ejercicio">
+    <h2>Encontrar el Número Máximo en un Arreglo</h2>
+    <p>Utilizando math </p>
+    <p>Ingrese un arreglo de números separados por comas:</p>
+    <input type="text" id="arreglo4">
+    <button onclick="encontrarMaximo2()">Encontrar Máximo</button>
+    <p id="resultado11"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
